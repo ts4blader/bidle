@@ -10,3 +10,5 @@ const Reducer = (state, action) => {
       return { ...state, blogLength: action.payload };
   }
 };
+
+export default Reducer;
