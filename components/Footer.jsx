@@ -45,8 +45,8 @@ export default function Footer() {
         {/* End Body */}
         {/* Foot */}
         <div className="footer__foot">
-          <p>{`@copyright ${BASE.releaseYear}  ${BASE.domain}`}</p>
           <p>{`Design by ${BASE.creator}`}</p>
+          <p>{`@copyright ${BASE.releaseYear}  ${BASE.domain}`}</p>
         </div>
         {/* EndFoot */}
       </div>

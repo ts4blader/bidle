@@ -57,6 +57,8 @@ $right-side: 30%;
     }
     // TODO End Pillars style
     &__foot {
+        display: flex;
+        justify-content: space-between;
         font-size: 2rem;
         text-align: right;
         color: change-color($color: $black-color, $lightness: 30);

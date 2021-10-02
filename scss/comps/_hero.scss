@@ -75,6 +75,7 @@
             transition: transform 200ms ease;
             &:hover {
                 transform: translateX(-1rem);
+                text-decoration: 2px underline;
             }
         }
     }
