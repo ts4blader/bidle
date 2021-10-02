@@ -1,0 +1,26 @@
+$pad: 1rem;
+
+.image-input {
+    form {
+        position: relative;
+        input {
+            width: 100%;
+            border: 3px solid $black-color;
+            padding: $pad $pad * 2;
+            font-size: 2.5rem;
+            font-family: "Saira";
+            font-weight: 500;
+        }
+        .icon {
+            width: 3rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: $pad * 2.5;
+        }
+        button {
+            all: unset;
+            cursor: pointer;
+        }
+    }
+}

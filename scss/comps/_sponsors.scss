@@ -1,0 +1,20 @@
+.sponsors-section {
+    background: $black-color;
+    padding: 5vh 0;
+    .title {
+        text-align: center;
+        font-size: 5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $white-color;
+    }
+    .sponsors {
+        display: flex;
+        justify-content: space-between;
+        li {
+            width: 25%;
+            margin: 3rem 0;
+            cursor: pointer;
+        }
+    }
+}

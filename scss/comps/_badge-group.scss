@@ -1,0 +1,20 @@
+.badge-grp {
+    width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+    .badge {
+        &[data-active="true"] {
+            background: $black-color;
+            color: white;
+        }
+        cursor: pointer;
+        text-transform: capitalize;
+        border: 3px solid $black-color;
+        width: max-content;
+        font-size: 3rem;
+        font-weight: 500;
+        padding: 0.5rem 1.5rem;
+        margin-right: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,48 @@
+$border: 4px solid $black-color;
+$font-size: 3rem;
+$layer: $gold-layer;
+
+.nav {
+    width: 80%;
+    height: 10vh;
+    background: $white-color;
+    border: $border;
+    font-weight: 500;
+    font-size: 3rem;
+    z-index: $layer;
+    @include flex();
+    //** positioning
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //** end positioning
+    .dropdown {
+        border-color: transparent;
+        background: $white-color;
+        &[data-show="false"] {
+            .dropdown__agent {
+                border-color: transparent;
+            }
+        }
+        &__agent {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    &__left,
+    &__right {
+        flex: 1;
+        flex-grow: 1;
+        @include flex();
+    }
+    &__right {
+        cursor: pointer;
+        p {
+            margin-right: 1.5rem;
+        }
+        .icon {
+            width: $font-size;
+        }
+    }
+}

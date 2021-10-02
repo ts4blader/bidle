@@ -1,0 +1,64 @@
+$gap: 5vh;
+$right-side: 30%;
+
+.footer {
+    background: $main-color;
+    padding: 5vh 0;
+    &__head {
+        margin-bottom: $gap;
+        @include flex(space-between, center);
+        .logo {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 5rem;
+            &::before {
+                content: "#";
+            }
+        }
+        .image-input {
+            width: $right-side;
+            input {
+                background: $main-color;
+            }
+        }
+    }
+    // TODO Pillars style
+    &__body {
+        display: flex;
+        margin-bottom: $gap;
+        .pillars {
+            margin-right: 10vw;
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            font-size: 2.5rem;
+            .pillar {
+                text-transform: capitalize;
+                .title {
+                    font-size: 4rem;
+                    font-weight: 600;
+                    margin-bottom: 2rem;
+                }
+                li {
+                    margin: 0.5rem 0;
+                    a {
+                        transition: transform 200ms ease;
+                    }
+                }
+                li:hover a {
+                    text-decoration: 2px underline;
+                    transform: translateX(1rem);
+                }
+            }
+        }
+        .like-fb {
+            width: $right-side;
+        }
+    }
+    // TODO End Pillars style
+    &__foot {
+        font-size: 2rem;
+        text-align: right;
+        color: change-color($color: $black-color, $lightness: 30);
+    }
+}

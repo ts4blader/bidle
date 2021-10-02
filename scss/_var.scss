@@ -1,0 +1,36 @@
+//TODO import font and other cdn
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Saira:wght@300;400;500;600;800&display=swap");
+
+$main-font: "Saira";
+$blog-font: "Quicksand";
+
+// ====== Color ============
+
+$main-color: #ffff00;
+$sub-color: #000000;
+$bg-color: $sub-color;
+$black-color: #000;
+$white-color: white;
+
+$text-color: $black-color;
+
+// ====== Break Point ============
+$break-point-lg: 1440px;
+$break-point-md: 1024px;
+$break-point-sm: 480px;
+
+// ====== Size ============
+
+$size: 1rem;
+$size-md: 0.7rem;
+$size-sm: 0.4rem;
+
+// ====== Layer ============
+$wood-layer: -10;
+$stone-layer: -5;
+$iron-layer: 1;
+$gold-layer: 5;
+$diamond-layer: 10;
+
+// ====== timing function =======
+$ease: cubic-bezier(0.445, 0.05, 0.55, 0.95);

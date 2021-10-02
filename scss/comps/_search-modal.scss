@@ -1,0 +1,41 @@
+$border: 3px solid $black-color;
+$gap: 3rem;
+
+.search-modal {
+    background: $white-color;
+    border: $border;
+    z-index: $diamond-layer + 1;
+    padding: 2rem 4rem;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $gap;
+        p {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+        .close-btn {
+            position: relative;
+            @include size(4rem);
+            cursor: pointer;
+            .bar {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                width: 4rem;
+                height: 5px;
+                background: $black-color;
+                &:nth-child(2) {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+    &__content {
+        form {
+            margin-bottom: $gap;
+        }
+    }
+}

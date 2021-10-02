@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px;
+    font-family: $main-font;
+}
+
+body {
+    font-size: 2 * $size;
+    //** Base color
+    color: $text-color;
+    background: $white-color;
+    //** End base color
+    line-height: 1.5;
+}
+//** Define for default styles image
+img {
+    display: block;
+    width: 100%;
+}
+//** Define for default styles anchor
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $text-color;
+}
+//** Default styles CONTAINER and WRAPPER
+.wrapper {
+    max-width: 1920px;
+}
+.container {
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
