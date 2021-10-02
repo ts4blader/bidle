@@ -62,16 +62,16 @@ export const SPONSORS = [
   {
     name: "westeros",
     image: "westeros.jpg",
-    link: "",
+    link: "/",
   },
   {
     name: "king's landing",
     image: "kingslanding.jpg",
-    link: "",
+    link: "/",
   },
   {
     name: "winterfell",
     image: "winterfell.jpg",
-    link: "",
+    link: "/",
   },
 ];

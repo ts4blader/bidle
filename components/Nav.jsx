@@ -1,6 +1,7 @@
 import React from "react";
 import Dropdown from "/components/Dropdown";
 import Icon from "/components/Icon";
+import Link from "next/link";
 import { CATEGORIES } from "/data/Base";
 
 export default function Nav() {
@@ -10,7 +11,11 @@ export default function Nav() {
         <Dropdown agent="categories" items={CATEGORIES} />
       </div>
       <div className="logo">
-        <Icon src="logo.jpg" alt="logo" />
+        <Link href="/">
+          <a>
+            <Icon src="logo.jpg" alt="logo" />
+          </a>
+        </Link>
       </div>
       <div className="nav__right search-btn">
         <p className="hide-on-sm">Search</p>

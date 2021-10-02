@@ -13,5 +13,5 @@ export async function getAllPost() {
 }
 
 export function getPostByCategory(data, category) {
-  return data.filter((item) => data.field.category === category);
+  return data.filter((item) => item.fields.category === category);
 }
