@@ -1,0 +1,43 @@
+$gap: 5vh;
+
+.card {
+    display: flex;
+    margin: $gap 0;
+    &__image {
+        width: 50%;
+        position: relative;
+        .label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: $gold-layer;
+            padding: 0.8rem 1.5rem;
+            $font-size: 2.5rem;
+            font-size: $font-size;
+            background: $bg-color;
+            color: $main-color;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            .icon {
+                width: $font-size * 0.8;
+                margin-right: 1rem;
+            }
+        }
+    }
+    &__text {
+        font-size: $font-size * 0.6;
+        margin-left: 5rem;
+        &__head {
+            display: flex;
+            .date::after {
+                content: "-";
+                margin: 0 0.5em;
+            }
+        }
+        h2 {
+            font-weight: 600;
+            font-size: 3em;
+        }
+    }
+}
