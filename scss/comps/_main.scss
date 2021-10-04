@@ -5,6 +5,12 @@
         justify-content: space-between;
         .cards {
             flex: 6;
+            .card {
+                transition: transform 0.2s ease;
+                &:hover {
+                    transform: translateY(-1rem);
+                }
+            }
         }
         .aside {
             flex: 3;

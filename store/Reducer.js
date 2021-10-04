@@ -8,6 +8,11 @@ const Reducer = (state, action) => {
       return { ...state, searchModal: false };
     case ACTION.SET_BLOG_LENGTH:
       return { ...state, blogLength: action.payload };
+    case ACTION.SET_POSTS:
+      return { ...state, posts: action.payload };
+    default:
+      alert("Not match ACTION!");
+      return state;
   }
 };
 

@@ -4,6 +4,7 @@ import Reducer from "./Reducer";
 export const StoreContext = createContext({});
 
 const INIT = {
+  posts: [],
   searchModal: false,
   blogLength: 0,
 };

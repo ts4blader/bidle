@@ -5,7 +5,7 @@ import { CATEGORIES } from "/data/Base";
 import { StoreContext } from "/store/Store";
 import ACTION from "/store/Action";
 
-export default function SearchModal({ posts }) {
+export default function SearchModal() {
   const [state, dispatch] = useContext(StoreContext);
 
   const close = useCallback((e) => {
