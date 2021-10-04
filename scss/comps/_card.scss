@@ -3,9 +3,11 @@ $gap: 5vh;
 .card {
     display: flex;
     margin: $gap 0;
+    position: relative;
+    height: 30rem;
     &__image {
-        width: 50%;
         position: relative;
+        flex: 1;
         .label {
             position: absolute;
             top: 0;
@@ -26,10 +28,12 @@ $gap: 5vh;
         }
     }
     &__text {
+        flex: 1;
         font-size: $font-size * 0.6;
         margin-left: 5rem;
         &__head {
             display: flex;
+            margin-bottom: 1rem;
             .date::after {
                 content: "-";
                 margin: 0 0.5em;
@@ -37,7 +41,8 @@ $gap: 5vh;
         }
         h2 {
             font-weight: 600;
-            font-size: 3em;
+            font-size: 2.5em;
+            line-height: 1.25;
         }
     }
 }

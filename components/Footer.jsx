@@ -26,7 +26,9 @@ export default function Footer() {
         {/* Head */}
         <div className="footer__head">
           <div className="logo">{BASE.name}</div>
-          <ImageInput placeholder="Email here" image="send.png" alt="send" />
+          <div id="subscribe-form">
+            <ImageInput placeholder="Email here" image="send.png" alt="send" />
+          </div>
         </div>
         {/* End Head */}
         {/* Body */}

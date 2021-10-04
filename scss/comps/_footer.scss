@@ -15,10 +15,13 @@ $right-side: 30%;
                 content: "#";
             }
         }
-        .image-input {
+        #subscribe-form {
             width: $right-side;
             input {
                 background: $main-color;
+                &:focus {
+                    background: white;
+                }
             }
         }
     }
@@ -35,9 +38,9 @@ $right-side: 30%;
             .pillar {
                 text-transform: capitalize;
                 .title {
-                    font-size: 4rem;
+                    font-size: 3rem;
                     font-weight: 600;
-                    margin-bottom: 2rem;
+                    margin-bottom: 1.5rem;
                 }
                 li {
                     margin: 0.5rem 0;

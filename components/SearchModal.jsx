@@ -5,7 +5,7 @@ import { CATEGORIES } from "/data/Base";
 import { StoreContext } from "/store/Store";
 import ACTION from "/store/Action";
 
-export default function SearchModal() {
+export default function SearchModal({ posts }) {
   const [state, dispatch] = useContext(StoreContext);
 
   const close = useCallback((e) => {
@@ -25,11 +25,14 @@ export default function SearchModal() {
           </div>
         </div>
         <div className="search-modal__content">
-          <ImageInput
-            placeholder="Post name"
-            image="search-bold-stroke.png"
-            alt="search"
-          />
+          <div className="input">
+            <ImageInput
+              placeholder="Post name"
+              image="search-bold-stroke.png"
+              alt="search"
+            />
+            <div className="hints"></div>
+          </div>
           {/* Badge Group */}
           <BadgeGroup items={CATEGORIES} />
           {/* End Badge Group */}

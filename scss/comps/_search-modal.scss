@@ -34,8 +34,9 @@ $gap: 3rem;
         }
     }
     &__content {
-        form {
+        .input {
             margin-bottom: $gap;
+            position: relative;
         }
     }
 }

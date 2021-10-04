@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import Icon from "/components/Icon";
 import Date from "/components/Date";
 import { CATEGORIES } from "/data/Base";
@@ -12,20 +12,25 @@ export default function Card({ post }) {
     return result[0];
   }, []);
 
+  const BG = useMemo(() => {
+    const link = "https:" + post.fields.postImage.fields.file.url;
+    return {
+      backgroundImage: `url('${link}')`,
+      backgroundSize: "cover",
+    };
+  }, []);
+
   return (
     <div className="card">
+      <Link href={`/blogs/${post.fields.slug}`}>
+        <a className="fullsize-link"></a>
+      </Link>
       {/* Card Image */}
-      <div className="card__image">
+      <div className="card__image" style={BG}>
         <div className="label">
           <Icon src={category.icon} alt="" />
           <p>{category.name}</p>
         </div>
-        <Image
-          src={"https:" + post.fields.postImage.fields.file.url}
-          alt={post.fields.postImage.fields.title}
-          width={post.fields.postImage.fields.file.details.image.width}
-          height={post.fields.postImage.fields.file.details.image.height}
-        />
       </div>
       {/* End Card Image */}
       <div className="card__text">
