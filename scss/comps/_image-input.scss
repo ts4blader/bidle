@@ -23,4 +23,10 @@ $pad: 1rem;
             cursor: pointer;
         }
     }
+    .error {
+        position: absolute;
+        left: 0;
+        bottom: 110%;
+        color: #ff3131;
+    }
 }

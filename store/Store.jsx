@@ -5,6 +5,7 @@ export const StoreContext = createContext({});
 
 const INIT = {
   posts: [],
+  filterPosts: [],
   searchModal: false,
   blogLength: 0,
 };

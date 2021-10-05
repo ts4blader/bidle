@@ -31,7 +31,6 @@ export default function SearchModal() {
               image="search-bold-stroke.png"
               alt="search"
             />
-            <div className="hints"></div>
           </div>
           {/* Badge Group */}
           <BadgeGroup items={CATEGORIES} />

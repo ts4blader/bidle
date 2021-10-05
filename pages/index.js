@@ -14,18 +14,17 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  console.log(posts);
-
   const [state, dispatch] = useContext(StoreContext);
 
   useEffect(() => {
     dispatch({ type: ACTION.SET_POSTS, payload: posts });
-  }, [posts]);
+    dispatch({ type: ACTION.SET_FILTER_POSTS, payload: posts });
+  }, []);
 
   return (
     <div className="home-page">
       <Hero />
-      <Main posts={state.posts} />
+      <Main filter={state.filterPosts} posts={state.posts} />
     </div>
   );
 }

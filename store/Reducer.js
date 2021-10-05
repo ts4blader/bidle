@@ -10,6 +10,8 @@ const Reducer = (state, action) => {
       return { ...state, blogLength: action.payload };
     case ACTION.SET_POSTS:
       return { ...state, posts: action.payload };
+    case ACTION.SET_FILTER_POSTS:
+      return { ...state, filterPosts: action.payload };
     default:
       alert("Not match ACTION!");
       return state;

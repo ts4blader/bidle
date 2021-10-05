@@ -3,12 +3,12 @@ import Card from "/components/Card";
 import Image from "/components/Image";
 import { getPostByDate } from "/libs/ContentfulHelper";
 
-export default function Main({ posts }) {
+export default function Main({ posts, filter }) {
   return (
     <main className="main">
       <div className="container content">
         <div className="cards">
-          {posts.map((item) => (
+          {filter.map((item) => (
             <Card key={item.fields.slug} post={item} />
           ))}
         </div>

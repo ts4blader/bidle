@@ -14,7 +14,8 @@ body {
     font-size: 2 * $size;
     //** Base color
     color: $text-color;
-    background: $white-color;
+    z-index: $diamond-layer + 1;
+
     //** End base color
     line-height: 1.5;
 }
@@ -30,7 +31,7 @@ a {
     text-decoration: none;
     color: $text-color;
     &.fullsize-link {
-        z-index: $diamond-layer - 1;
+        z-index: $gold-layer - 1;
         position: absolute;
         top: 0;
         left: 0;

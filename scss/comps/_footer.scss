@@ -16,6 +16,7 @@ $right-side: 30%;
             }
         }
         #subscribe-form {
+            position: relative;
             width: $right-side;
             input {
                 background: $main-color;
