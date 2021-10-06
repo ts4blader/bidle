@@ -7,6 +7,14 @@ export const BASE = {
   releaseYear: "2021",
 };
 
+export const META = {
+  title: "Bidle -- A personal blog",
+  url: "https://" + BASE.domain,
+  description:
+    "Bidle is my blog, sharing my hobbies, works and more. This website build by Nextjs and Contentful for learning Nextjs",
+  img: "/images/thumbnail.jpg",
+};
+
 export const CATEGORIES = [
   {
     name: "design",

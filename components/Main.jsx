@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Card from "/components/Card";
 import Aside from "/components/Aside";
 
@@ -8,6 +8,20 @@ const DEFAULT_PAGE = 1;
 export default function Main({ posts, allPosts }) {
   const [page, setPage] = useState(DEFAULT_PAGE);
   const [data, setData] = useState([]);
+  const main = useRef(null);
+
+  const scrollTop = useCallback(() => {
+    window.scrollTo({
+      top: main.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
+  const PageChange = useCallback((page) => {
+    setPage(page);
+    scrollTop();
+  }, []);
 
   useEffect(() => {
     let start = (page - 1) * 6;
@@ -17,7 +31,7 @@ export default function Main({ posts, allPosts }) {
   }, [page, posts]);
 
   return (
-    <main className="main">
+    <main className="main" ref={main}>
       <div className="container content">
         <ul className="cards">
           {data.map((item) => (
@@ -32,7 +46,11 @@ export default function Main({ posts, allPosts }) {
       </div>
       <div className="container">
         <div className="paginate">
-          <div className="prev" data-disabled={page === 1}>
+          <div
+            className="prev"
+            data-disabled={page === 1}
+            onClick={() => PageChange(page - 1)}
+          >
             prev
           </div>
           <ul>
@@ -42,7 +60,7 @@ export default function Main({ posts, allPosts }) {
                   <li
                     key={item}
                     data-active={item + 1 === page}
-                    onClick={() => setPage(item + 1)}
+                    onClick={() => PageChange(item + 1)}
                   >
                     {item + 1}
                   </li>
@@ -51,6 +69,7 @@ export default function Main({ posts, allPosts }) {
             )}
           </ul>
           <div
+            onClick={() => PageChange(page + 1)}
             className="next"
             data-disabled={page === parseInt(posts.length / ITEM_PER_PAGE) + 1}
           >

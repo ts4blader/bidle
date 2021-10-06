@@ -23,6 +23,10 @@ export default function Home({ posts }) {
 
   return (
     <div className="home-page">
+      {/* Head */}
+
+      {/* End Head */}
+
       <Hero />
       <Main posts={posts} allPosts={posts} />
     </div>
