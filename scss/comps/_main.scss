@@ -30,6 +30,7 @@
                 &__text {
                     transition: transform 500ms $expoOut;
                     position: absolute;
+                    width: 100%;
                     background: $main-color;
                     transform: translateY(100%);
                     margin: 0;

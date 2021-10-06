@@ -1,26 +1,21 @@
 import React from "react";
 import Card from "/components/Card";
-import Image from "/components/Image";
-import { getPostByDate } from "/libs/ContentfulHelper";
+import Aside from "/components/Aside";
 
-export default function Main({ posts, filter }) {
+export default function Main({ posts, allPosts }) {
   return (
     <main className="main">
       <div className="container content">
-        <div className="cards">
-          {filter.map((item) => (
-            <Card key={item.fields.slug} post={item} />
+        <ul className="cards">
+          {posts.map((item) => (
+            <li key={item.fields.slug}>
+              <Card post={item} />
+            </li>
           ))}
-        </div>
-        <div className="aside">
-          <p className="title">Recently Posts</p>
-          {getPostByDate(posts).map((item) => (
-            <Card key={item.fields.slug} post={item} />
-          ))}
-          <a href="#subscribe-form">
-            <Image src="subscribe.jpg" alt="Subscribe" />
-          </a>
-        </div>
+        </ul>
+        {/* Aside */}
+        <Aside posts={allPosts} />
+        {/* End Aside */}
       </div>
       <div className="container">
         <div className="paginate"></div>

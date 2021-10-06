@@ -3,20 +3,32 @@ import { parseISO } from "date-fns";
 
 const POST_SLICE = 3;
 
-export async function getAllPost() {
-  const client = createClient({
-    space: "up7zvjjaxklq",
-    accessToken: "YON_T69vQFwEVLLJPwnL6RNxnS1qJbO94SepbDIYFo8",
-    // space: process.env.CONTENTFUL_SPACE_ID,
-    // accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
+const client = createClient({
+  space: "up7zvjjaxklq",
+  accessToken: "YON_T69vQFwEVLLJPwnL6RNxnS1qJbO94SepbDIYFo8",
+  // space: process.env.CONTENTFUL_SPACE_ID,
+  // accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+});
 
+export async function getAllPost() {
   const result = await client.getEntries({ content_type: "blog" });
   return result.items;
 }
 
-export function getPostByCategory(data, category) {
-  return data.filter((item) => item.fields.category === category);
+export async function getPostByCategory(category) {
+  const result = await client.getEntries({
+    content_type: "blog",
+    "fields.category": category,
+  });
+  return result.items;
+}
+
+export async function getPostBySlug(slug) {
+  const result = await client.getEntries({
+    content_type: "blog",
+    "fields.slug": slug,
+  });
+  return result.items;
 }
 
 export function getPostByDate(data, endPoint = POST_SLICE) {

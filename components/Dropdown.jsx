@@ -21,7 +21,7 @@ export default function Dropdown({ agent, items }) {
       </div>
       <ul className="dropdown__items">
         <li>
-          <Link href="/blogs/">all</Link>
+          <Link href="/">all</Link>
         </li>
         {items.map((item, index) => (
           <li key={index}>

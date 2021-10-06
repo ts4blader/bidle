@@ -19,12 +19,12 @@ export default function Home({ posts }) {
   useEffect(() => {
     dispatch({ type: ACTION.SET_POSTS, payload: posts });
     dispatch({ type: ACTION.SET_FILTER_POSTS, payload: posts });
-  }, []);
+  }, [posts]);
 
   return (
     <div className="home-page">
       <Hero />
-      <Main filter={state.filterPosts} posts={state.posts} />
+      <Main posts={posts} allPosts={posts} />
     </div>
   );
 }

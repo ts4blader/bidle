@@ -10,27 +10,27 @@ export const BASE = {
 export const CATEGORIES = [
   {
     name: "design",
-    link: "/blogs/design",
+    link: "/categories/design",
     icon: "pen.png",
   },
   {
     name: "life style",
-    link: "/blogs/life-style",
+    link: "/categories/life-style",
     icon: "lifestyle.png",
   },
   {
     name: "GYM",
-    link: "/blogs/GYM",
+    link: "/categories/GYM",
     icon: "fitness.png",
   },
   {
     name: "coding",
-    link: "/blogs/coding",
+    link: "/categories/coding",
     icon: "code.png",
   },
   {
     name: "retro game",
-    link: "/blogs/retro-game",
+    link: "/categories/retro-game",
     icon: "retro.png",
   },
 ];
