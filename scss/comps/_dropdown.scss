@@ -17,15 +17,12 @@ $border: 3px solid currentColor;
             }
         }
         .dropdown__items {
-            display: none;
+            visibility: hidden;
         }
     }
     &[data-show="true"] {
         .dropdown__agent {
             border-bottom: none;
-            input {
-                display: none;
-            }
             .icon {
                 transform: rotate(180deg);
             }
@@ -37,16 +34,6 @@ $border: 3px solid currentColor;
     &__agent {
         border: $border;
         padding: $items-padding;
-        position: relative;
-        input {
-            cursor: pointer;
-            opacity: 0;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
         @include flex();
         p {
             margin-right: 1.5rem;
