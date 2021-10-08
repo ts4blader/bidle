@@ -46,22 +46,22 @@ export const CATEGORIES = [
 export const SOCIALS = [
   {
     name: "github",
-    link: "http://www.github.com",
+    link: "https://github.com/ts4blader",
     icon: "github.png",
   },
   {
     name: "codepen",
-    link: "http://www.codepen.io",
+    link: "https://codepen.io/ts4blader",
     icon: "codepen.png",
   },
   {
     name: "facebook",
-    link: "http://www.facebook.com",
+    link: "https://www.facebook.com/minhquoc.tran.9828/",
     icon: "facebook.png",
   },
   {
     name: "instagram",
-    link: "http://www.instagram.com",
+    link: "https://www.instagram.com/ts4blader/",
     icon: "insta.png",
   },
 ];
