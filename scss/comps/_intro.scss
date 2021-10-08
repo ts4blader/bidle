@@ -1,0 +1,65 @@
+.intro {
+    display: flex;
+    height: 80vh;
+    font-size: 2.5rem;
+    &__left {
+        background: $main-color;
+        flex: 3;
+        @include flex();
+        font-weight: 800;
+        font-size: 15rem;
+    }
+    &__right {
+        flex: 7;
+        display: flex;
+        justify-content: space-between;
+        padding: 10vh 10vw;
+        background: $black-color;
+        color: $white-color;
+    }
+    &__content {
+        &__head {
+            display: flex;
+            .author-name::before {
+                content: "-";
+                margin: 0 1rem;
+            }
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 3em;
+            color: $main-color;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+    }
+    &__author {
+        margin-left: 5vw;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        height: 80%;
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+            line-height: 1;
+            writing-mode: vertical-rl;
+            color: $white-color;
+        }
+        .divider {
+            flex-grow: 1;
+            width: 2px;
+            margin: 3rem 0;
+            background: $white-color;
+        }
+        .icon {
+            transition: transform 200ms ease;
+            cursor: pointer;
+            width: 2.5rem * 1.5;
+            &:hover {
+                transform: translateX(-1rem);
+            }
+        }
+    }
+}

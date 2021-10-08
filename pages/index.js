@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import Hero from "/components/Hero";
 import Main from "/components/Main";
+import Sponsors from "/components/Sponsors";
 import { StoreContext } from "/store/Store";
 import ACTION from "/store/Action";
 import { getAllPost } from "/libs/ContentfulHelper";
@@ -29,6 +30,7 @@ export default function Home({ posts }) {
 
       <Hero />
       <Main posts={posts} allPosts={posts} />
+      <Sponsors />
     </div>
   );
 }

@@ -28,7 +28,7 @@ export async function getPostBySlug(slug) {
     content_type: "blog",
     "fields.slug": slug,
   });
-  return result.items;
+  return result.items[0];
 }
 
 export function getPostByDate(data, endPoint = POST_SLICE) {

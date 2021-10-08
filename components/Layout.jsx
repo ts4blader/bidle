@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import Nav from "/components/Nav";
 import Icon from "/components/Icon";
 import Footer from "/components/Footer";
-import Sponsors from "/components/Sponsors";
 import SearchModal from "/components/SearchModal";
 
 export default function Layout({ children }) {
@@ -19,7 +18,6 @@ export default function Layout({ children }) {
       <SearchModal />
       <Nav />
       {children}
-      <Sponsors />
       <Footer />
 
       <div className="on-top-btn" onClick={handleScroll}>
