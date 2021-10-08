@@ -12,36 +12,36 @@
                 }
             }
         }
-        .aside {
-            flex: 3;
-            margin-left: 5%;
-            .title {
-                margin-top: 5vh;
-                font-size: 4rem;
-                font-weight: 800;
-                text-decoration: 4px underline;
+    }
+}
+.aside {
+    flex: 3;
+    margin-left: 5%;
+    .title {
+        margin-top: 5vh;
+        font-size: 4rem;
+        font-weight: 800;
+        text-decoration: 4px underline;
+    }
+    .card {
+        overflow: hidden;
+        &:hover {
+            .card__text {
+                transform: translateY(0%);
             }
-            .card {
-                overflow: hidden;
-                &:hover {
-                    .card__text {
-                        transform: translateY(0%);
-                    }
-                }
-                &__text {
-                    transition: transform 500ms $expoOut;
-                    position: absolute;
-                    width: 100%;
-                    background: $main-color;
-                    transform: translateY(100%);
-                    margin: 0;
-                    bottom: 0;
-                    padding: 2rem 3rem;
-                }
-                &__image {
-                    width: 100%;
-                }
-            }
+        }
+        &__text {
+            transition: transform 500ms $expoOut;
+            position: absolute;
+            width: 100%;
+            background: $main-color;
+            transform: translateY(100%);
+            margin: 0;
+            bottom: 0;
+            padding: 2rem 3rem;
+        }
+        &__image {
+            width: 100%;
         }
     }
 }

@@ -3,19 +3,21 @@ import Date from "/components/Date";
 import Icon from "/components/Icon";
 
 export default function Intro({ post }) {
+  const { date, author, title, authorEmail } = post.fields;
+
   return (
     <div className="intro">
       <div className="intro__left">Bi</div>
       <div className="intro__right">
         <div className="intro__content">
           <div className="intro__content__head">
-            <Date dateString={post.fields.date} />
-            <div className="author-name">{post.fields.author}</div>
+            <Date dateString={date} />
+            <div className="author-name">{author}</div>
           </div>
-          <h2>{post.fields.title}</h2>
+          <h2>{title}</h2>
         </div>
         <div className="intro__author">
-          <a href={`mailto:${post.fields.authorEmail}`}>contact author</a>
+          <a href={`mailto:${authorEmail}`}>contact author</a>
           <div className="divider"></div>
           <Icon src="like.png" alt="like" />
         </div>
