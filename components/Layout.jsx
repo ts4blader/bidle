@@ -3,7 +3,6 @@ import Nav from "/components/Nav";
 import Icon from "/components/Icon";
 import Footer from "/components/Footer";
 import SearchModal from "/components/SearchModal";
-import Loader from "/components/Loader";
 
 export default function Layout({ children }) {
   const handleScroll = useCallback(() => {
@@ -16,7 +15,6 @@ export default function Layout({ children }) {
 
   return (
     <div className="wrapper">
-      <Loader />
       <SearchModal />
       <Nav />
       {children}
