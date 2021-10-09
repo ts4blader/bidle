@@ -25,6 +25,7 @@ export async function getStaticProps({ params }) {
       posts: await getPostByCategory(params.category.replace("-", " ")),
       allPosts: await getAllPost(),
     },
+    revalidate: 5,
   };
 }
 

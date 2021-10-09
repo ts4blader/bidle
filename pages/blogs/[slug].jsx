@@ -28,6 +28,7 @@ export async function getStaticProps({ params }) {
       post: res,
       allPosts: all,
     },
+    revalidate: 5,
   };
 }
 

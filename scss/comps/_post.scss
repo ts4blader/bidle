@@ -49,6 +49,9 @@
                 font-family: $blog-font;
                 text-indent: 2em;
                 margin: 2em 0;
+                b {
+                    font-weight: 600;
+                }
             }
             .figure {
                 margin: 5rem 0;
