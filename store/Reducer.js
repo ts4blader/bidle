@@ -6,6 +6,10 @@ const Reducer = (state, action) => {
       return { ...state, searchModal: true };
     case ACTION.SEARCH_MODAL_HIDE:
       return { ...state, searchModal: false };
+    case ACTION.LOADER_SHOW:
+      return { ...state, loader: true };
+    case ACTION.LOADER_HIDE:
+      return { ...state, loader: false };
     case ACTION.SET_BLOG_LENGTH:
       return { ...state, blogLength: action.payload };
     case ACTION.SET_POSTS:

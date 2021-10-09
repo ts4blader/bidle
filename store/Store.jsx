@@ -8,6 +8,7 @@ const INIT = {
   filterPosts: [],
   searchModal: false,
   blogLength: 0,
+  loader: false,
 };
 
 export default function Store({ children }) {

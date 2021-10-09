@@ -73,6 +73,8 @@ export default function Post({ post, allPosts }) {
 
     setHeadings(postHeadings);
   }, [post]);
+
+  //* Origin output
   return (
     <div className="post">
       <Intro post={post} />
