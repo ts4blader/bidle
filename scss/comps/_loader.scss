@@ -1,8 +1,24 @@
 .loader {
     &[data-show="false"] {
         width: 0;
-        & > div {
+        .dots {
             display: none;
+        }
+    }
+    &[data-first="true"] {
+        .dot {
+            transition: 0.5s ease;
+            opacity: 0;
+        }
+        .logo {
+            h6 {
+                animation: skewIn 1s forwards $expoOut;
+                animation-delay: 0.5s;
+            }
+            p {
+                animation: slideIn 1s forwards $expoOut;
+                animation-delay: 1.5s;
+            }
         }
     }
     position: fixed;
@@ -48,8 +64,8 @@
             font-weight: 600;
         }
         p {
-            font-size: 0.5em;
-            transform: translateY(100vh);
+            font-size: 0.3em;
+            transform: translateY(50vh);
             opacity: 0;
         }
     }
@@ -62,7 +78,13 @@
 }
 @keyframes skewIn {
     to {
-        letter-spacing: auto;
+        letter-spacing: unset;
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
         opacity: 1;
     }
 }
