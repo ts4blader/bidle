@@ -15,6 +15,7 @@ export default function ImageInput({ placeholder, image }) {
   const handlerSubmit = useCallback(
     (e) => {
       e.preventDefault();
+
       // check input
       if (!input) {
         setError(true);
@@ -23,9 +24,25 @@ export default function ImageInput({ placeholder, image }) {
       //clear input
       setInput("");
       setError(false);
-      dispatch({ type: ACTION.SET_FILTER_POSTS, payload: filterData });
+
+      let result = [...filterData];
+      //* category search check
+      if (state.categorySearch == "all")
+        dispatch({ type: ACTION.SET_FILTER_POSTS, payload: result });
+      else
+        dispatch({
+          type: ACTION.SET_FILTER_POSTS,
+          payload: result.filter(
+            (item) => item.fields.category == state.categorySearch
+          ),
+        });
+      //* hide modal
       dispatch({ type: ACTION.SEARCH_MODAL_HIDE });
+
+      //* set filter data to default
+      setFilterData(state.posts);
     },
+
     [filterData]
   );
 

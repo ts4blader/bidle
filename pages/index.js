@@ -21,7 +21,6 @@ export default function Home({ posts }) {
 
   useEffect(() => {
     dispatch({ type: ACTION.SET_POSTS, payload: posts });
-    dispatch({ type: ACTION.SET_FILTER_POSTS, payload: posts });
   }, [posts]);
 
   return (
@@ -31,7 +30,7 @@ export default function Home({ posts }) {
       {/* End Head */}
 
       <Hero />
-      <Main posts={posts} allPosts={posts} />
+      <Main posts={state.filterPosts} allPosts={state.posts} />
       <Sponsors />
     </div>
   );

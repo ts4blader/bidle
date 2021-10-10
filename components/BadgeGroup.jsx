@@ -1,4 +1,6 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useContext } from "react";
+import { StoreContext } from "/store/Store";
+import ACTION from "/store/Action";
 
 const Badge = ({ active = false, text }) => {
   return (
@@ -8,8 +10,8 @@ const Badge = ({ active = false, text }) => {
   );
 };
 
-export default function BadgeGroup({ initial = 0, items }) {
-  const [current, setCurrent] = useState(initial);
+export default function BadgeGroup({ items }) {
+  const [state, dispatch] = useContext(StoreContext);
 
   const ITEMS = useMemo(() => {
     const temp = items.map((item) => item.name);
@@ -19,8 +21,13 @@ export default function BadgeGroup({ initial = 0, items }) {
   return (
     <ul className="badge-grp">
       {ITEMS.map((item, index) => (
-        <li key={index} onClick={() => setCurrent(index)}>
-          <Badge text={item} active={index === current} />
+        <li
+          key={index}
+          onClick={() =>
+            dispatch({ type: ACTION.SET_CATEGORY_SEARCH, payload: item })
+          }
+        >
+          <Badge text={item} active={item == state.categorySearch} />
         </li>
       ))}
     </ul>
