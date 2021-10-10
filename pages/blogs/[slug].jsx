@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { getPostBySlug, getAllPost } from "/libs/ContentfulHelper";
 import Intro from "/components/Intro";
 import Aside from "/components/Aside";
+import MyHead from "/components/MyHead";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
@@ -33,7 +34,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ post, allPosts }) {
-  const { postImage, content } = post.fields;
+  const { title, postImage, content } = post.fields;
 
   const [headings, setHeadings] = useState([]);
 
@@ -77,6 +78,11 @@ export default function Post({ post, allPosts }) {
   //* Origin output
   return (
     <div className="post">
+      <MyHead
+        title={`${title} - Bidle - A Personal Blog`}
+        img={`https:${postImage.fields.file.url}`}
+      />
+
       <Intro post={post} />
 
       <main>

@@ -17,7 +17,8 @@ export default function MyHead({ title, description, img, url }) {
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
-      {/* <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="favicon.ico" />
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
