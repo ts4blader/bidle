@@ -19,20 +19,20 @@
     pointer-events: none;
     width: 100%;
     height: 100%;
-    top: 0;
+    left: 0;
     background: $main-color;
     font-size: 16rem;
     z-index: $diamond-layer;
-    transition: width 500ms $expoOut;
+    transition: height 500ms $expoOut;
     &[data-show="false"] {
-        width: 0;
-        right: 0;
+        height: 0;
+        bottom: 0;
         .dots {
             display: none;
         }
     }
     &[data-show="true"] {
-        left: 0;
+        top: 0;
     }
     & > div {
         position: absolute;
