@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Hero from "/components/Hero";
 import Main from "/components/Main";
 import Sponsors from "/components/Sponsors";
+import MyHead from "/components/MyHead";
 import { StoreContext } from "/store/Store";
 import ACTION from "/store/Action";
 import { getAllPost } from "/libs/ContentfulHelper";
@@ -26,7 +27,7 @@ export default function Home({ posts }) {
   return (
     <div className="home-page">
       {/* Head */}
-
+      <MyHead />
       {/* End Head */}
 
       <Hero />

@@ -8,7 +8,7 @@ export const BASE = {
 };
 
 export const META = {
-  title: "Bidle -- A personal blog",
+  title: "Bidle - A personal blog",
   url: "https://" + BASE.domain,
   description:
     "Bidle is my blog, sharing my hobbies, works and more. This website build by Nextjs and Contentful for learning Nextjs",

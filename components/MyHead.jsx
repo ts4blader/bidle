@@ -1,6 +1,14 @@
 import Head from "next/head";
 
 import React from "react";
+import { META } from "/data/Base";
+
+MyHead.defaultProps = {
+  title: META.title,
+  description: META.description,
+  img: META.img,
+  url: META.url,
+};
 
 export default function MyHead({ title, description, img, url }) {
   return (
@@ -9,7 +17,7 @@ export default function MyHead({ title, description, img, url }) {
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
-
+      {/* <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> */}
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
