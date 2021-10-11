@@ -30,7 +30,7 @@ export default function Home({ posts }) {
       {/* End Head */}
 
       <Hero />
-      <Main posts={state.filterPosts} allPosts={state.posts} />
+      <Main posts={state.posts} allPosts={state.posts} />
       <Sponsors />
     </div>
   );
