@@ -3,14 +3,16 @@ import Icon from "/components/Icon";
 import { StoreContext } from "/store/Store";
 import ACTION from "/store/Action";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function ImageInput({ placeholder, image }) {
   const [state, dispatch] = useContext(StoreContext);
+  const router = useRouter();
 
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [showHints, setShowHints] = useState(false);
-  const [filterData, setFilterData] = useState(state.posts);
+  const [filterData, setFilterData] = useState([]);
 
   const handlerSubmit = useCallback(
     (e) => {
@@ -39,8 +41,9 @@ export default function ImageInput({ placeholder, image }) {
       //* hide modal
       dispatch({ type: ACTION.SEARCH_MODAL_HIDE });
 
-      //* set filter data to default
-      setFilterData(state.posts);
+      // //* set filter data to default
+
+      router.push("/search");
     },
 
     [filterData]
@@ -48,10 +51,12 @@ export default function ImageInput({ placeholder, image }) {
 
   const handleChange = useCallback(
     (e) => {
-      const searchWord = e.target.value;
+      let searchWord = e.target.value;
       setInput(searchWord);
 
-      const newData = state.filterPosts.filter((item) =>
+      let newData = [...state.posts];
+
+      newData = newData.filter((item) =>
         item.fields.title.toLowerCase().includes(searchWord.toLowerCase())
       );
 
