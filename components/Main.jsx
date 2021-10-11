@@ -49,17 +49,19 @@ export default function Main({ posts, allPosts, count = false }) {
         {/* End Aside */}
       </div>
       <div className="container">
-        <div className="paginate">
-          <div
-            className="prev"
-            data-disabled={page === 1}
-            onClick={() => PageChange(page - 1)}
-          >
-            prev
-          </div>
-          <ul>
-            {[...Array(parseInt(posts.length / ITEM_PER_PAGE + 1)).keys()].map(
-              (item) => {
+        {posts.length != 0 && (
+          <div className="paginate">
+            <div
+              className="prev"
+              data-disabled={page === 1}
+              onClick={() => PageChange(page - 1)}
+            >
+              prev
+            </div>
+            <ul>
+              {[
+                ...Array(parseInt(posts.length / ITEM_PER_PAGE + 1)).keys(),
+              ].map((item) => {
                 return (
                   <li
                     key={item}
@@ -69,17 +71,19 @@ export default function Main({ posts, allPosts, count = false }) {
                     {item + 1}
                   </li>
                 );
+              })}
+            </ul>
+            <div
+              onClick={() => PageChange(page + 1)}
+              className="next"
+              data-disabled={
+                page === parseInt(posts.length / ITEM_PER_PAGE) + 1
               }
-            )}
-          </ul>
-          <div
-            onClick={() => PageChange(page + 1)}
-            className="next"
-            data-disabled={page === parseInt(posts.length / ITEM_PER_PAGE) + 1}
-          >
-            next
+            >
+              next
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </main>
   );

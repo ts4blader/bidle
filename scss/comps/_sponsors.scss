@@ -11,10 +11,17 @@
     .sponsors {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         li {
             width: 25%;
             margin: 5rem 0;
             cursor: pointer;
+            @include responsive($break-point-md) {
+                width: 50%;
+            }
+        }
+        @include responsive($break-point-md) {
+            flex-direction: column;
         }
     }
 }

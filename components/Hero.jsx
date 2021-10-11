@@ -9,7 +9,7 @@ export default function Hero() {
 
       <div className="hero-section__bg">
         <div className="bg-left"></div>
-        <div className="bg-right" style={{}}></div>
+        <div className="bg-right hide-on-md"></div>
       </div>
 
       {/* End Background Elements */}

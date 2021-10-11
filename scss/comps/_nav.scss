@@ -46,6 +46,13 @@ $layer: $gold-layer;
         }
     }
     .logo {
+        width: 13rem;
+        @include responsive($break-point-lg) {
+            width: 15rem;
+        }
+        @include responsive($break-point-lg) {
+            width: 13rem;
+        }
         a {
             display: block;
         }

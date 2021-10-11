@@ -11,7 +11,7 @@ export default function Aside({ posts }) {
   }, [posts]);
 
   return (
-    <div className="aside">
+    <div className="aside hide-on-md">
       <p className="title">Recently Posts</p>
       {data.map((item) => (
         <Card key={item.fields.slug} post={item} />
