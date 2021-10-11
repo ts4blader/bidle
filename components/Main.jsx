@@ -5,7 +5,7 @@ import Aside from "/components/Aside";
 const ITEM_PER_PAGE = 6;
 const DEFAULT_PAGE = 1;
 
-export default function Main({ posts, allPosts }) {
+export default function Main({ posts, allPosts, count = false }) {
   const [page, setPage] = useState(DEFAULT_PAGE);
   const [data, setData] = useState([]);
   const main = useRef(null);
@@ -32,6 +32,10 @@ export default function Main({ posts, allPosts }) {
 
   return (
     <main className="main" ref={main}>
+      {count && (
+        <div className="count-result container">Found {posts.length} posts</div>
+      )}
+
       <div className="container content">
         <ul className="cards">
           {data.map((item) => (

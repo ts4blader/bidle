@@ -15,7 +15,7 @@ export default function Search() {
       {/* End Head */}
 
       <Hero />
-      <Main posts={state.filterPosts} allPosts={state.posts} />
+      <Main posts={state.filterPosts} allPosts={state.posts} count={true} />
       <Sponsors />
     </div>
   );

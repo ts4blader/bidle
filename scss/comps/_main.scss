@@ -1,5 +1,10 @@
 .main {
     margin: 10vh 0;
+
+    .count-result {
+        font-size: 5rem;
+        font-weight: 600;
+    }
     .content {
         display: flex;
         justify-content: space-between;
