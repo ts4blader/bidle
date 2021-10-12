@@ -7,6 +7,11 @@
             }
         }
     }
+    @include responsive($break-point-sm) {
+        & ~ .nav {
+            top: 70vh;
+        }
+    }
     main {
         margin: 15vh 0;
     }
@@ -51,6 +56,9 @@
                 margin: 2em 0;
                 b {
                     font-weight: 600;
+                }
+                @include responsive($break-point-md) {
+                    font-size: 1.2em;
                 }
             }
             .figure {

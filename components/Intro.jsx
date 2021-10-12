@@ -7,7 +7,7 @@ export default function Intro({ post }) {
 
   return (
     <div className="intro">
-      <div className="intro__left">Bi</div>
+      <div className="intro__left hide-on-sm">Bi</div>
       <div className="intro__right">
         <div className="intro__content">
           <div className="intro__content__head">

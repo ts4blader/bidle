@@ -15,9 +15,9 @@ export default function Layout({ children }) {
 
   return (
     <div className="wrapper">
+      {children}
       <SearchModal />
       <Nav />
-      {children}
       <Footer />
 
       <div className="on-top-btn" onClick={handleScroll}>

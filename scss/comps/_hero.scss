@@ -95,6 +95,10 @@
                 text-decoration: 2px underline;
             }
         }
+        @include responsive($break-point-sm) {
+            top: unset;
+            bottom: 5vh;
+        }
     }
 
     //* End Social Style
@@ -111,22 +115,24 @@
         }
         &__content {
             width: max-content;
+            font-size: 4rem;
+            @include responsive($break-point-sm) {
+            }
         }
         .intro-personal {
             text-transform: uppercase;
-            font-size: 2.5rem;
+            font-size: 0.6em;
             color: change-color($white-color, $lightness: 70);
         }
         .description {
             transform: translateX(80%);
-            font-size: 4rem;
             font-weight: 500;
         }
         h1 {
             transform: translateX(30%);
             text-transform: uppercase;
             color: $main-color;
-            font-size: 12rem;
+            font-size: 3em;
             font-weight: 800;
             &::before {
                 content: "#";

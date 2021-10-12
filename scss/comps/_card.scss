@@ -4,8 +4,11 @@ $gap: 5vh;
     display: flex;
     margin: $gap 0;
     position: relative;
-    height: 30rem;
+    min-height: 30rem;
     z-index: 1;
+    @include responsive($break-point-sm) {
+        flex-direction: column;
+    }
     &__image {
         position: relative;
         flex: 1;
@@ -27,6 +30,13 @@ $gap: 5vh;
                 margin-right: 1rem;
             }
         }
+        @include responsive($break-point-sm) {
+            flex: unset;
+            height: 40rem;
+            .label {
+                font-size: 3rem;
+            }
+        }
     }
     &__text {
         flex: 1;
@@ -44,6 +54,10 @@ $gap: 5vh;
             font-weight: 600;
             font-size: 2.5em;
             line-height: 1.25;
+        }
+        @include responsive($break-point-sm) {
+            margin-left: 0;
+            margin-top: 2rem;
         }
     }
 }

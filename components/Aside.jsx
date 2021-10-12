@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "/components/Image";
 import Card from "/components/Card";
 import { getPostByDate } from "/libs/ContentfulHelper";

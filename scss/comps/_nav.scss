@@ -16,6 +16,12 @@ $layer: $gold-layer;
     top: 80vh;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include responsive($break-point-sm) {
+        top: 10vh;
+        height: unset;
+        background: transparent;
+        border: none;
+    }
     //** end positioning
     .dropdown {
         border-color: transparent;
@@ -44,14 +50,37 @@ $layer: $gold-layer;
         .icon {
             width: $font-size;
         }
+        @include responsive($break-point-sm) {
+            background: $main-color;
+            border: 3px solid $black-color;
+            order: 3;
+            @include size(10rem);
+            flex-grow: 0;
+            flex: unset;
+            .icon {
+                width: 3.5rem;
+            }
+        }
+    }
+    &__left {
+        @include responsive($break-point-sm) {
+            order: 2;
+            background: $white-color;
+            border: $border;
+            border-left-width: 0;
+            border-right-width: 0;
+        }
     }
     .logo {
         width: 13rem;
         @include responsive($break-point-lg) {
             width: 15rem;
         }
-        @include responsive($break-point-lg) {
+        @include responsive($break-point-md) {
             width: 13rem;
+        }
+        @include responsive($break-point-sm) {
+            width: 10rem;
         }
         a {
             display: block;
