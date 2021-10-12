@@ -41,6 +41,7 @@ const Input = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          //check input
           if (!input) {
             setError("Please enter something!");
             return;

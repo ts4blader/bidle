@@ -5,6 +5,7 @@ import Date from "/components/Date";
 import { CATEGORIES } from "/data/Base";
 
 export default function Card({ post }) {
+  //* Get category object from data
   const category = useMemo(() => {
     const result = CATEGORIES.filter(
       (item) => item.name === post.fields.category
@@ -12,6 +13,7 @@ export default function Card({ post }) {
     return result[0];
   }, []);
 
+  //* Set Card Image
   const BG = useMemo(() => {
     const link = "https:" + post.fields.postImage.fields.file.url;
     return {

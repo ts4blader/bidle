@@ -16,9 +16,11 @@ export default function Loader() {
       }, 3000);
     };
 
+    //* url change start event
     router.events.on("routeChangeStart", () => {
       setShow(true);
     });
+    //* url change complete event
     router.events.on("routeChangeComplete", () => {
       setShow(false);
     });

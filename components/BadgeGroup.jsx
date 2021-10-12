@@ -2,6 +2,7 @@ import React, { useMemo, useContext } from "react";
 import { StoreContext } from "/store/Store";
 import ACTION from "/store/Action";
 
+//* Single Badge
 const Badge = ({ active = false, text }) => {
   return (
     <div className="badge" data-active={active}>
@@ -15,6 +16,7 @@ export default function BadgeGroup({ items }) {
 
   const ITEMS = useMemo(() => {
     const temp = items.map((item) => item.name);
+    //* add all to categories
     return ["all", ...temp];
   }, [items]);
 
