@@ -6,6 +6,7 @@ $gap: 3rem;
     border: $border;
     z-index: $diamond-layer + 1;
     padding: 2rem 4rem;
+    max-width: 90%;
     &__head {
         display: flex;
         justify-content: space-between;

@@ -113,11 +113,14 @@
                 transform: translateX(-30%);
             }
         }
+        @include responsive($break-point-xs) {
+            &__content {
+                transform: translateX(0);
+            }
+        }
         &__content {
             width: max-content;
             font-size: 4rem;
-            @include responsive($break-point-sm) {
-            }
         }
         .intro-personal {
             text-transform: uppercase;
@@ -127,6 +130,9 @@
         .description {
             transform: translateX(80%);
             font-weight: 500;
+            @include responsive($break-point-xs) {
+                transform: translateX(20%);
+            }
         }
         h1 {
             transform: translateX(30%);
@@ -136,6 +142,9 @@
             font-weight: 800;
             &::before {
                 content: "#";
+            }
+            @include responsive($break-point-xs) {
+                transform: translateX(0);
             }
         }
     }

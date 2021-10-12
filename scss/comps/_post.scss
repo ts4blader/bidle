@@ -52,7 +52,8 @@
             }
             p {
                 font-family: $blog-font;
-                text-indent: 2em;
+                text-align: justify;
+                word-break: break-word;
                 margin: 2em 0;
                 b {
                     font-weight: 600;

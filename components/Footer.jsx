@@ -5,9 +5,13 @@ import Icon from "/components/Icon";
 import Image from "/components/Image";
 
 const Pillar = ({ title, items }) => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="pillar">
-      <p className="title">{title}</p>
+    <div className="pillar" data-open={open}>
+      <p className="title" onClick={() => setOpen((prev) => !prev)}>
+        {title}
+      </p>
       <ul>
         {items.map((item, index) => (
           <li key={index}>

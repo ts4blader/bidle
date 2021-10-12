@@ -33,6 +33,11 @@
             font-weight: 600;
             line-height: 1.25;
         }
+        @include responsive($break-point-xs) {
+            h2 {
+                font-size: 2.5em;
+            }
+        }
     }
     &__author {
         margin-left: 5vw;

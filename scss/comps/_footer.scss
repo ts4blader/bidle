@@ -29,7 +29,7 @@ $right-side: 30%;
         @include responsive($break-point-sm) {
             flex-direction: column;
             #subscribe-form {
-                margin-top: 2rem;
+                margin-top: 3rem;
                 width: 100%;
             }
         }
@@ -49,7 +49,6 @@ $right-side: 30%;
                 .title {
                     font-size: 3rem;
                     font-weight: 600;
-                    margin-bottom: 1.5rem;
                 }
                 li {
                     margin: 0.5rem 0;
@@ -70,6 +69,37 @@ $right-side: 30%;
             flex-direction: column;
             .pillars {
                 margin-right: 0;
+                flex-direction: column;
+                .pillar {
+                    font-size: 3rem;
+                    margin-bottom: 3rem;
+                    &[data-open="false"] {
+                        ul {
+                            height: 0;
+                        }
+                    }
+                    .title {
+                        cursor: pointer;
+                        position: relative;
+                        font-size: 4rem;
+                        border-bottom: 3px solid $black-color;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            right: 0%;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            @include size(6rem);
+                            background: url("/icons/dropdown.png");
+                            background-size: cover;
+                        }
+                    }
+                    ul {
+                        height: 25rem;
+                        transition: height 500ms $expoOut;
+                        overflow: hidden;
+                    }
+                }
             }
             .like-fb {
                 margin-top: 5rem;

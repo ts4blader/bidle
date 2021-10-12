@@ -4,6 +4,7 @@
     bottom: 5vh;
     right: 5vh;
     background: $main-color;
+    z-index: $diamond-layer - 1;
     @include size(7rem);
     border: 4px solid $black-color;
     transition: 300ms ease;

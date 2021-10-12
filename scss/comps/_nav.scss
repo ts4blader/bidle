@@ -22,6 +22,9 @@ $layer: $gold-layer;
         background: transparent;
         border: none;
     }
+    @include responsive($break-point-xs) {
+        width: 90%;
+    }
     //** end positioning
     .dropdown {
         border-color: transparent;

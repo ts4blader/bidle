@@ -8,6 +8,7 @@ $gap: 5vh;
     z-index: 1;
     @include responsive($break-point-sm) {
         flex-direction: column;
+        margin: 7vh 0;
     }
     &__image {
         position: relative;
