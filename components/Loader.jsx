@@ -1,41 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 
-export default function Loader() {
-  const [show, setShow] = useState(true);
-  const [first, setFirst] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    //* For the first time or refresh
-    window.onload = () => {
-      setFirst(true);
-      setTimeout(() => {
-        setShow(false);
-        setFirst(false);
-      }, 3000);
-    };
-
-    //* url change start event
-    router.events.on("routeChangeStart", () => {
-      setShow(true);
-    });
-    //* url change complete event
-    router.events.on("routeChangeComplete", () => {
-      setShow(false);
-    });
-
-    return () => {
-      // Unbind event when comps dismount
-      router.events.off("routeChangeStart", () => {
-        setShow(true);
-      });
-      router.events.off("routeChangeComplete", () => {
-        setShow(false);
-      });
-    };
-  }, []);
-
+export default function Loader({ show, first }) {
   return (
     <div className="loader" data-show={show} data-first={first}>
       <div className="dots">
