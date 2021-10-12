@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         setShow(false);
       });
     };
-  }, []);
+  }, [show, first, router]);
 
   return (
     <Store>
