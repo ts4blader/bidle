@@ -30,15 +30,15 @@ function MyApp({ Component, pageProps }) {
     });
 
     return () => {
-      // // Unbind event when comps dismount
-      // router.events.off("routeChangeStart", () => {
-      //   setShow(true);
-      // });
-      // router.events.off("routeChangeComplete", () => {
-      //   setShow(false);
-      // });
+      // Unbind event when comps dismount
+      router.events.off("routeChangeStart", () => {
+        setShow(true);
+      });
+      router.events.off("routeChangeComplete", () => {
+        setShow(false);
+      });
     };
-  }, [show, first, router]);
+  }, []);
 
   return (
     <Store>
