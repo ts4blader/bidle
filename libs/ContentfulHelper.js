@@ -4,10 +4,8 @@ import { parseISO } from "date-fns";
 const POST_SLICE = 3;
 
 const client = createClient({
-  space: "up7zvjjaxklq",
-  accessToken: "YON_T69vQFwEVLLJPwnL6RNxnS1qJbO94SepbDIYFo8",
-  // space: process.env.CONTENTFUL_SPACE_ID,
-  // accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  space: process.env.NEXT_APP_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_APP_CONTENTFUL_ACCESS_KEY,
 });
 
 export async function getAllPost() {
