@@ -47,7 +47,7 @@ export default function Post({ post, allPosts }) {
           return (
             <div className="figure">
               <Image
-                src={`https://${node.data.target.fields.file.url}`}
+                src={`https:${node.data.target.fields.file.url}`}
                 height={node.data.target.fields.file.details.image.height}
                 width={node.data.target.fields.file.details.image.width}
                 alt={node.data.target.fields.title}
